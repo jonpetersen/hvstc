@@ -1,0 +1,12 @@
+{
+  "EnableTimeout" : 1500,
+  "InitTagTimeout" : 30000,
+  "MQTTHost" : "52.31.92.169",
+  "MQTTPort" : 1883,
+  "MQTTKeepAlive" : 10,
+  "MQTTTopic" : "hvs/temps",
+  "MQTTQos" : 1,
+  "MQTTTopic" : "hvs/temps",
+  "UUIDS" : ["0117c536b80f","0117c597916a","0117c58898b8"],
+  "DEVICES" :["YUNZI","4AA","USB"]
+}

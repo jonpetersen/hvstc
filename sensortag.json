@@ -1,0 +1,9 @@
+{
+  "EnableTimeout" : 1500,
+  "InitTagTimeout" : 15000,
+  "MQTTHost" : "52.31.92.169",
+  "MQTTPort" : 1883,
+  "MQTTKeepAlive" : 10,
+  "MQTTTopic" : "hvs/temps",
+  "MQTTQos" : 1
+}
