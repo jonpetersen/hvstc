@@ -1,0 +1,4935 @@
+[
+    {
+        "id": "ffc0f070.9208e",
+        "type": "tab",
+        "label": "HVS Sensors",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "2ec4e80b.ac4b4",
+        "type": "tab",
+        "label": "HVS Sales Email",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "8f6eab97.ac371",
+        "type": "tab",
+        "label": "SensorTag WiFi",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "c25178d3.bb572",
+        "type": "tab",
+        "label": "All Sensors",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "dcefa46c.5c5da8",
+        "type": "subflow",
+        "name": "Subflow 1",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
+        "id": "c330808b.7a3a2",
+        "type": "mqtt-broker",
+        "z": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": ""
+    },
+    {
+        "id": "434d9bf1.50643c",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-custom",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "Gill Sans,Geneva,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#4B7930",
+                    "value": "#4B7930",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#4B7930",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#6db046",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#4b7930",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Gill Sans,Geneva,sans-serif"
+                }
+            }
+        },
+        "site": {
+            "name": "Temperature Sensors",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 44,
+                "sy": 40,
+                "gx": 4,
+                "gy": 6,
+                "cx": 4,
+                "cy": 6,
+                "px": 0,
+                "py": 3
+            }
+        }
+    },
+    {
+        "id": "14334bec.053e9c",
+        "type": "ui_group",
+        "z": "",
+        "name": "Default",
+        "tab": "",
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "c1071466.2bbfc",
+        "type": "ui_group",
+        "z": "",
+        "name": "Default",
+        "tab": "",
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "14862f8f.2c5b",
+        "type": "ui_group",
+        "z": "",
+        "name": "Default",
+        "tab": "",
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "66b7ba4b.b43f44",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Temperatures",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "edecae1f.7d1e28",
+        "type": "ui_group",
+        "z": "",
+        "name": "2540 (07)",
+        "tab": "66b7ba4b.b43f44",
+        "order": 3,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "842cc29f.a1c33",
+        "type": "MySQLdatabase",
+        "z": "",
+        "host": "hvsmysql.c7wwgcu9honp.eu-west-1.rds.amazonaws.com",
+        "port": "3306",
+        "db": "hvs",
+        "tz": ""
+    },
+    {
+        "id": "cfd25838.3de4c",
+        "type": "ui_group",
+        "z": "",
+        "name": "2540 (d3)",
+        "tab": "66b7ba4b.b43f44",
+        "order": 4,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "7763213b.3528e",
+        "type": "ui_group",
+        "z": "",
+        "name": "2650 (03)",
+        "tab": "66b7ba4b.b43f44",
+        "order": 2,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "bdba7049.4d8a38",
+        "type": "ui_group",
+        "z": "",
+        "name": "YUNZI",
+        "tab": "66b7ba4b.b43f44",
+        "order": 5,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "41987324.72b8fc",
+        "type": "ui_group",
+        "z": "",
+        "name": "4AA",
+        "tab": "66b7ba4b.b43f44",
+        "order": 6,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "772f375b.30708",
+        "type": "ui_group",
+        "z": "",
+        "name": "USB",
+        "tab": "66b7ba4b.b43f44",
+        "order": 7,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "f59cc50e.aad2b",
+        "type": "mqtt in",
+        "z": "ffc0f070.9208e",
+        "name": "HVS/Temps",
+        "topic": "hvs/temps",
+        "qos": "2",
+        "broker": "c330808b.7a3a2",
+        "x": 75,
+        "y": 513,
+        "wires": [
+            [
+                "303941a4.fcce9e"
+            ]
+        ]
+    },
+    {
+        "id": "30f466f9.b3c98a",
+        "type": "inject",
+        "z": "2ec4e80b.ac4b4",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "0 9-17 * * *",
+        "once": true,
+        "x": 210,
+        "y": 220,
+        "wires": [
+            [
+                "df74374d.1bd978"
+            ]
+        ]
+    },
+    {
+        "id": "24c16566.2215d2",
+        "type": "debug",
+        "z": "2ec4e80b.ac4b4",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "false",
+        "x": 690,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "df74374d.1bd978",
+        "type": "http request",
+        "z": "2ec4e80b.ac4b4",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "url": "http://hvsapp.jonpetersen.co.uk/salestoday",
+        "tls": "",
+        "x": 460.5,
+        "y": 129,
+        "wires": [
+            [
+                "24c16566.2215d2",
+                "f548ae30.87ef18"
+            ]
+        ]
+    },
+    {
+        "id": "f548ae30.87ef18",
+        "type": "e-mail",
+        "z": "2ec4e80b.ac4b4",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "name": "jonepetersen@gmail.com",
+        "dname": "",
+        "x": 750,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "303941a4.fcce9e",
+        "type": "json",
+        "z": "ffc0f070.9208e",
+        "name": "",
+        "pretty": true,
+        "x": 216.5,
+        "y": 508,
+        "wires": [
+            [
+                "31328ca6.26184c",
+                "24832a99.be4eb6",
+                "ef7ad565.04f1c8",
+                "d7c5d505.133f78",
+                "b9197641.55f278",
+                "f1b3b297.35ce3",
+                "810a3787.1cfa98",
+                "c05af611.f0af28",
+                "16a7ef37.9e1d71",
+                "205cda96.276c4e",
+                "48c96358.7dc87c",
+                "e412f8dc.d9f778",
+                "b06f8a65.aa86e8"
+            ]
+        ]
+    },
+    {
+        "id": "31328ca6.26184c",
+        "type": "debug",
+        "z": "ffc0f070.9208e",
+        "name": "Temps JSON",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 135.5,
+        "y": 376,
+        "wires": []
+    },
+    {
+        "id": "24832a99.be4eb6",
+        "type": "function",
+        "z": "ffc0f070.9208e",
+        "name": "ambient temperature 07",
+        "func": "var msg1 = { payload: msg.payload[\"ambientTemperature\"] }\nvar uuid = { payload: msg.payload[\"uuid\"] }\nif (msg.payload[\"uuid\"] == \"bc6a29ab3b07\") {\n    return msg1;\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 487.5,
+        "y": 28,
+        "wires": [
+            [
+                "770e5253.ecf6b4",
+                "805a35dd.09985",
+                "c18c20b1.71eab",
+                "3f717a.94e5ce86",
+                "546642fc.f6bb1c"
+            ]
+        ]
+    },
+    {
+        "id": "770e5253.ecf6b4",
+        "type": "ui_gauge",
+        "z": "ffc0f070.9208e",
+        "name": "Temperature 07",
+        "group": "edecae1f.7d1e28",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature 07",
+        "label": "deg C",
+        "format": "{{value}}",
+        "min": "-5",
+        "max": "15",
+        "colors": [
+            "#E6E600",
+            "#00B500",
+            "#CA3838"
+        ],
+        "seg1": "1",
+        "seg2": "8",
+        "x": 780.5,
+        "y": 64,
+        "wires": []
+    },
+    {
+        "id": "805a35dd.09985",
+        "type": "ui_chart",
+        "z": "ffc0f070.9208e",
+        "name": "Temperature Last 24 Hours",
+        "group": "edecae1f.7d1e28",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Last 24 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1057.5,
+        "y": 64,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ef7ad565.04f1c8",
+        "type": "function",
+        "z": "ffc0f070.9208e",
+        "name": "timestamp 07",
+        "func": "var msg1 = { payload: msg.payload[\"time\"] }\nvar uuid = { payload: msg.payload[\"uuid\"] }\nif (msg.payload[\"uuid\"] == \"bc6a29ab3b07\") {\n    return msg1;\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 510.5,
+        "y": 773,
+        "wires": [
+            [
+                "a8ed0e33.6d91d"
+            ]
+        ]
+    },
+    {
+        "id": "a0097557.a0dd2",
+        "type": "ui_text",
+        "z": "ffc0f070.9208e",
+        "group": "edecae1f.7d1e28",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "Last Reading 07",
+        "label": "<b>Last Reading</b>",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "x": 1073.5,
+        "y": 769,
+        "wires": []
+    },
+    {
+        "id": "8af10d32.01519",
+        "type": "mysql",
+        "z": "ffc0f070.9208e",
+        "mydb": "842cc29f.a1c33",
+        "name": "HVS MySQL",
+        "x": 121.5,
+        "y": 759,
+        "wires": [
+            [
+                "a618f109.47808"
+            ]
+        ]
+    },
+    {
+        "id": "d7c5d505.133f78",
+        "type": "function",
+        "z": "ffc0f070.9208e",
+        "name": "INSERT",
+        "func": "var uuid = JSON.stringify(msg.payload[\"uuid\"])\nvar time = JSON.stringify(msg.payload[\"time\"])\nvar at = JSON.stringify(msg.payload[\"ambientTemperature\"])\nvar ot = JSON.stringify(msg.payload[\"objectTemperature\"])\nvar loc = JSON.stringify(msg.payload[\"loc\"])\nvar lux = JSON.stringify(msg.payload[\"lux\"])\nvar batteryLevel = JSON.stringify(msg.payload[\"batteryLevel\"])\n\nmsg.topic = \"INSERT INTO temperatures (uuid, time, at, ot, loc, lux, batterylevel) values (\" + uuid + \", \" + time + \", \" + at + \", \" + ot + \", \" + loc + \", \" + lux + \", \" + batteryLevel + \")\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 117.5,
+        "y": 696,
+        "wires": [
+            [
+                "8af10d32.01519"
+            ]
+        ]
+    },
+    {
+        "id": "a618f109.47808",
+        "type": "debug",
+        "z": "ffc0f070.9208e",
+        "name": "MySQL Response",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 120.5,
+        "y": 821,
+        "wires": []
+    },
+    {
+        "id": "c18c20b1.71eab",
+        "type": "ui_chart",
+        "z": "ffc0f070.9208e",
+        "name": "Temperature Last 3 Hours",
+        "group": "edecae1f.7d1e28",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Last 3 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1363,
+        "y": 62,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "3f717a.94e5ce86",
+        "type": "switch",
+        "z": "ffc0f070.9208e",
+        "name": "Temperature Threshold",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "7",
+                "vt": "num"
+            },
+            {
+                "t": "gte",
+                "v": "7",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 2,
+        "x": 809,
+        "y": 108,
+        "wires": [
+            [
+                "1071a71e.ac2099"
+            ],
+            [
+                "7be300ef.05adf"
+            ]
+        ]
+    },
+    {
+        "id": "1071a71e.ac2099",
+        "type": "template",
+        "z": "ffc0f070.9208e",
+        "name": "Temperature safe",
+        "field": "",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "\"Temperature of 07 ({{payload}}) within safe limits\"",
+        "output": "str",
+        "x": 1077,
+        "y": 100,
+        "wires": [
+            [
+                "465b5585.ebc1e4"
+            ]
+        ]
+    },
+    {
+        "id": "7be300ef.05adf",
+        "type": "template",
+        "z": "ffc0f070.9208e",
+        "name": "Temperature too high",
+        "field": "",
+        "fieldType": "msg",
+        "syntax": "mustache",
+        "template": "Temperature of 07 ({{payload}}) is too high!",
+        "output": "str",
+        "x": 1083,
+        "y": 140,
+        "wires": [
+            [
+                "465b5585.ebc1e4",
+                "8c55aaba.2fe638"
+            ]
+        ]
+    },
+    {
+        "id": "465b5585.ebc1e4",
+        "type": "debug",
+        "z": "ffc0f070.9208e",
+        "name": "Fridge Status",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 1291,
+        "y": 114,
+        "wires": []
+    },
+    {
+        "id": "b9197641.55f278",
+        "type": "function",
+        "z": "ffc0f070.9208e",
+        "name": "ambient temperature d3",
+        "func": "var msg1 = { payload: msg.payload[\"ambientTemperature\"] }\nvar uuid = { payload: msg.payload[\"uuid\"] }\nif (msg.payload[\"uuid\"] == \"bc6a29abebd3\") {\n    return msg1;\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 501,
+        "y": 182,
+        "wires": [
+            [
+                "e1d8055f.bc0ae",
+                "b624b82c.c968",
+                "15184f17.a2df01",
+                "bfac1e6d.15b728",
+                "5168cdd9.12a29c"
+            ]
+        ]
+    },
+    {
+        "id": "e1d8055f.bc0ae",
+        "type": "ui_chart",
+        "z": "ffc0f070.9208e",
+        "name": "Temperature Last 24 Hours d3",
+        "group": "cfd25838.3de4c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Last 24 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1092,
+        "y": 227,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b624b82c.c968",
+        "type": "ui_chart",
+        "z": "ffc0f070.9208e",
+        "name": "Temperature Last 3 Hours d3",
+        "group": "cfd25838.3de4c",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Last 3 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1421,
+        "y": 227,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f1b3b297.35ce3",
+        "type": "function",
+        "z": "ffc0f070.9208e",
+        "name": "timestamp d3",
+        "func": "var msg1 = { payload: msg.payload[\"time\"] }\nvar uuid = { payload: msg.payload[\"uuid\"] }\nif (msg.payload[\"uuid\"] == \"bc6a29abebd3\") {\n    return msg1;\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 511,
+        "y": 726,
+        "wires": [
+            [
+                "cd1b4224.71d9b"
+            ]
+        ]
+    },
+    {
+        "id": "cd1b4224.71d9b",
+        "type": "function",
+        "z": "ffc0f070.9208e",
+        "name": "Date.parse",
+        "func": "var msg1 = Date.parse(msg.payload)\nmsg.payload = {}\nmsg.payload.date = msg1\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 674,
+        "y": 732,
+        "wires": [
+            [
+                "1132cf1f.d51ca1"
+            ]
+        ]
+    },
+    {
+        "id": "1132cf1f.d51ca1",
+        "type": "moment",
+        "z": "ffc0f070.9208e",
+        "name": "",
+        "topic": "",
+        "input": "payload.date",
+        "inputType": "msg",
+        "inTz": "ETC/GMT",
+        "adjAmount": "1",
+        "adjType": "hours",
+        "adjDir": "add",
+        "format": "ddd, MMM Do, HH:mm:ss",
+        "locale": "en_gb",
+        "output": "",
+        "outputType": "msg",
+        "outTz": "ETC/GMT",
+        "x": 867,
+        "y": 732,
+        "wires": [
+            [
+                "56ca6281.787a2c"
+            ]
+        ]
+    },
+    {
+        "id": "56ca6281.787a2c",
+        "type": "ui_text",
+        "z": "ffc0f070.9208e",
+        "group": "cfd25838.3de4c",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "Last Reading d3",
+        "label": "<b>Last Reading</b>",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "x": 1076,
+        "y": 726,
+        "wires": []
+    },
+    {
+        "id": "15184f17.a2df01",
+        "type": "switch",
+        "z": "ffc0f070.9208e",
+        "name": "Temperature Threshold",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "7",
+                "vt": "num"
+            },
+            {
+                "t": "gte",
+                "v": "7",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 2,
+        "x": 838,
+        "y": 264,
+        "wires": [
+            [
+                "8fc660ba.dd442"
+            ],
+            [
+                "f6a3372.5cb66c8"
+            ]
+        ]
+    },
+    {
+        "id": "8fc660ba.dd442",
+        "type": "template",
+        "z": "ffc0f070.9208e",
+        "name": "Temperature safe",
+        "field": "",
+        "fieldType": "msg",
+        "syntax": "mustache",
+        "template": "Temperature of d3 ({{payload}}) within safe limits",
+        "output": "str",
+        "x": 1103,
+        "y": 266,
+        "wires": [
+            [
+                "e4769bfb.061ae8"
+            ]
+        ]
+    },
+    {
+        "id": "f6a3372.5cb66c8",
+        "type": "template",
+        "z": "ffc0f070.9208e",
+        "name": "Temperature too high",
+        "field": "",
+        "fieldType": "msg",
+        "syntax": "mustache",
+        "template": "Temperature of d3 ({{payload}}) is too high!",
+        "output": "str",
+        "x": 1113,
+        "y": 300,
+        "wires": [
+            [
+                "e4769bfb.061ae8",
+                "ba636793.f73ee"
+            ]
+        ]
+    },
+    {
+        "id": "e4769bfb.061ae8",
+        "type": "debug",
+        "z": "ffc0f070.9208e",
+        "name": "Fridge Status",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 1322,
+        "y": 278,
+        "wires": []
+    },
+    {
+        "id": "9c5a4f1f.881238",
+        "type": "smooth",
+        "z": "ffc0f070.9208e",
+        "name": "Calculate Mean",
+        "action": "mean",
+        "count": "24",
+        "round": "",
+        "mult": "single",
+        "x": 982.5,
+        "y": 25,
+        "wires": [
+            [
+                "a004c0d6.692238"
+            ]
+        ]
+    },
+    {
+        "id": "546642fc.f6bb1c",
+        "type": "function",
+        "z": "ffc0f070.9208e",
+        "name": "Convert to float",
+        "func": "//var msg1 = parseFloat(msg.payload)\n//msg.payload = {}\n//msg.payload.temp = msg1\n//return msg;\n\nmsg.payload = Number(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 785.5,
+        "y": 24,
+        "wires": [
+            [
+                "9c5a4f1f.881238"
+            ]
+        ]
+    },
+    {
+        "id": "a004c0d6.692238",
+        "type": "ui_chart",
+        "z": "ffc0f070.9208e",
+        "name": "Mean Temp 2 Hour MA",
+        "group": "edecae1f.7d1e28",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Mean Temp 2 Hour MA for last 24 hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1204.5,
+        "y": 20,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "bfac1e6d.15b728",
+        "type": "ui_gauge",
+        "z": "ffc0f070.9208e",
+        "name": "Ambient Temperature d3",
+        "group": "cfd25838.3de4c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature d3",
+        "label": "deg C",
+        "format": "{{value}}",
+        "min": "-5",
+        "max": "15",
+        "colors": [
+            "#E6E600",
+            "#00B500",
+            "#CA3838"
+        ],
+        "seg1": "1",
+        "seg2": "8",
+        "x": 843,
+        "y": 224,
+        "wires": []
+    },
+    {
+        "id": "5168cdd9.12a29c",
+        "type": "function",
+        "z": "ffc0f070.9208e",
+        "name": "Convert to float",
+        "func": "//var msg1 = parseFloat(msg.payload)\n//msg.payload = {}\n//msg.payload.temp = msg1\n//return msg;\n\nmsg.payload = Number(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 812,
+        "y": 186,
+        "wires": [
+            [
+                "4bb5f8a0.8cb1c"
+            ]
+        ]
+    },
+    {
+        "id": "4bb5f8a0.8cb1c",
+        "type": "smooth",
+        "z": "ffc0f070.9208e",
+        "name": "Calculate Mean",
+        "action": "mean",
+        "count": "24",
+        "round": "",
+        "mult": "single",
+        "x": 1055,
+        "y": 192,
+        "wires": [
+            [
+                "e6e85cf9.54a958"
+            ]
+        ]
+    },
+    {
+        "id": "e6e85cf9.54a958",
+        "type": "ui_chart",
+        "z": "ffc0f070.9208e",
+        "name": "Mean Temp 2 Hour MA",
+        "group": "cfd25838.3de4c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Mean Temp 2 Hour MA for last 24 hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1321,
+        "y": 189,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "8547e8d9.0537b",
+        "type": "debug",
+        "z": "8f6eab97.ac371",
+        "name": "Tmp ST Wi-fi",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 211,
+        "y": 417,
+        "wires": []
+    },
+    {
+        "id": "917f657c.fb09a8",
+        "type": "inject",
+        "z": "8f6eab97.ac371",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "3600",
+        "crontab": "",
+        "once": true,
+        "x": 129,
+        "y": 176,
+        "wires": [
+            [
+                "89aab96b.7cca88"
+            ]
+        ]
+    },
+    {
+        "id": "89aab96b.7cca88",
+        "type": "http request",
+        "z": "8f6eab97.ac371",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "url": "http://ptc1.dtdns.net/param_sensortag_poll.html",
+        "tls": "",
+        "x": 131,
+        "y": 216,
+        "wires": [
+            [
+                "54398cb.197dc74"
+            ]
+        ]
+    },
+    {
+        "id": "54398cb.197dc74",
+        "type": "html",
+        "z": "8f6eab97.ac371",
+        "name": "",
+        "tag": "#tmp",
+        "ret": "text",
+        "as": "multi",
+        "x": 180.5,
+        "y": 276,
+        "wires": [
+            [
+                "30e5a5b8.126092"
+            ]
+        ]
+    },
+    {
+        "id": "30e5a5b8.126092",
+        "type": "function",
+        "z": "8f6eab97.ac371",
+        "name": "tmp",
+        "func": "var msg1 = {};\nvar str = msg.payload;\nvar tmp = str.match(/[A-Za-z0-9-]{4} [A-Za-z0-9-]{4} [A-Za-z0-9-\\.]{4,5} (.+)/)[1];\nmsg1.payload = String(tmp);\nreturn msg1;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 197.5,
+        "y": 325,
+        "wires": [
+            [
+                "10a1e8.910b0618",
+                "8547e8d9.0537b",
+                "a4effa19.d4bad8",
+                "8e35ff4d.1a1db8",
+                "8b14f45.960a288",
+                "45c222a5.bb4064"
+            ]
+        ]
+    },
+    {
+        "id": "10a1e8.910b0618",
+        "type": "function",
+        "z": "8f6eab97.ac371",
+        "name": "timestamp",
+        "func": "var msg1 = {};\nmsg1.payload = new Date().toString();\nreturn msg1;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 349.5,
+        "y": 208,
+        "wires": [
+            [
+                "7990a392.5a007c"
+            ]
+        ]
+    },
+    {
+        "id": "7990a392.5a007c",
+        "type": "moment",
+        "z": "8f6eab97.ac371",
+        "name": "",
+        "topic": "",
+        "input": "payload.date",
+        "inputType": "msg",
+        "inTz": "ETC/GMT",
+        "adjAmount": "1",
+        "adjType": "hours",
+        "adjDir": "add",
+        "format": "ddd, MMM Do, HH:mm:ss",
+        "locale": "en_gb",
+        "output": "",
+        "outputType": "msg",
+        "outTz": "ETC/GMT",
+        "x": 511,
+        "y": 171,
+        "wires": [
+            [
+                "26398189.a3a82e"
+            ]
+        ]
+    },
+    {
+        "id": "8b14f45.960a288",
+        "type": "ui_gauge",
+        "z": "8f6eab97.ac371",
+        "name": "Ambient Temperature 3200",
+        "group": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Ambient Temperature 3200",
+        "label": "deg C",
+        "format": "{{value}}",
+        "min": "-5",
+        "max": "15",
+        "colors": [
+            "#E6E600",
+            "#00B500",
+            "#CA3838"
+        ],
+        "seg1": "1",
+        "seg2": "8",
+        "x": 612,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "26398189.a3a82e",
+        "type": "ui_text",
+        "z": "8f6eab97.ac371",
+        "group": "",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "Last Reading 3200",
+        "label": "<b>Last Reading</b>",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "x": 770,
+        "y": 174,
+        "wires": []
+    },
+    {
+        "id": "8e35ff4d.1a1db8",
+        "type": "ui_chart",
+        "z": "8f6eab97.ac371",
+        "name": "Ambient Temperature Last 24 Hours 3200",
+        "group": "",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Ambient Temperature Last 24 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 648,
+        "y": 269,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a4effa19.d4bad8",
+        "type": "ui_chart",
+        "z": "8f6eab97.ac371",
+        "name": "Ambient Temperature Last 3 Hours 3200",
+        "group": "",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Ambient Temperature Last 3 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1103,
+        "y": 166,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "45c222a5.bb4064",
+        "type": "function",
+        "z": "8f6eab97.ac371",
+        "name": "Convert to float",
+        "func": "//var msg1 = parseFloat(msg.payload)\n//msg.payload = {}\n//msg.payload.temp = msg1\n//return msg;\n\nmsg.payload = Number(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1295,
+        "y": 206,
+        "wires": [
+            [
+                "e7742a25.6e8c5"
+            ]
+        ]
+    },
+    {
+        "id": "e7742a25.6e8c5",
+        "type": "smooth",
+        "z": "8f6eab97.ac371",
+        "name": "Calculate Mean",
+        "action": "mean",
+        "count": "24",
+        "round": "",
+        "mult": "single",
+        "x": 1420,
+        "y": 251,
+        "wires": [
+            [
+                "802ce560.834f68"
+            ]
+        ]
+    },
+    {
+        "id": "802ce560.834f68",
+        "type": "ui_chart",
+        "z": "8f6eab97.ac371",
+        "name": "Mean Temp 2 Hour MA",
+        "group": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Mean Temp 2 Hour MA for last 24 hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1554,
+        "y": 202,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "810a3787.1cfa98",
+        "type": "function",
+        "z": "ffc0f070.9208e",
+        "name": "ambient temperature YUNZI",
+        "func": "var msg1 = { payload: msg.payload[\"ambientTemperature\"] }\nvar uuid = { payload: msg.payload[\"uuid\"] }\nif (msg.payload[\"uuid\"] == \"0117c536b80f\") {\n    return msg1;\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 510,
+        "y": 329,
+        "wires": [
+            [
+                "464d9cd0.8b0634",
+                "df33bfbe.27ce68",
+                "16c54e7b.7cc1a2",
+                "1d7f6927.e9bbf7",
+                "7740c662.40cda8"
+            ]
+        ]
+    },
+    {
+        "id": "464d9cd0.8b0634",
+        "type": "ui_chart",
+        "z": "ffc0f070.9208e",
+        "name": "Temperature Last 24 Hours",
+        "group": "bdba7049.4d8a38",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Last 24 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1081,
+        "y": 374,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "df33bfbe.27ce68",
+        "type": "ui_chart",
+        "z": "ffc0f070.9208e",
+        "name": "Temperature Last 3 Hours d3",
+        "group": "bdba7049.4d8a38",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Last 3 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1420,
+        "y": 374,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "16c54e7b.7cc1a2",
+        "type": "switch",
+        "z": "ffc0f070.9208e",
+        "name": "Temperature Threshold",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "-12",
+                "vt": "num"
+            },
+            {
+                "t": "gte",
+                "v": "-12",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 2,
+        "x": 837,
+        "y": 411,
+        "wires": [
+            [
+                "3f4c36ed.fb77e2"
+            ],
+            [
+                "c3ece266.bd578"
+            ]
+        ]
+    },
+    {
+        "id": "3f4c36ed.fb77e2",
+        "type": "template",
+        "z": "ffc0f070.9208e",
+        "name": "Temperature safe",
+        "field": "",
+        "fieldType": "msg",
+        "syntax": "mustache",
+        "template": "Temperature of YUNZI ({{payload}}) within safe limits",
+        "output": "str",
+        "x": 1102,
+        "y": 413,
+        "wires": [
+            [
+                "ef3aaec.7f0225"
+            ]
+        ]
+    },
+    {
+        "id": "c3ece266.bd578",
+        "type": "template",
+        "z": "ffc0f070.9208e",
+        "name": "Temperature too high",
+        "field": "",
+        "fieldType": "msg",
+        "syntax": "mustache",
+        "template": "Temperature of YUNZI ({{payload}}) is too high!",
+        "output": "str",
+        "x": 1112,
+        "y": 447,
+        "wires": [
+            [
+                "ef3aaec.7f0225",
+                "c5655435.f29208"
+            ]
+        ]
+    },
+    {
+        "id": "ef3aaec.7f0225",
+        "type": "debug",
+        "z": "ffc0f070.9208e",
+        "name": "Freezer Status",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 1321,
+        "y": 425,
+        "wires": []
+    },
+    {
+        "id": "1d7f6927.e9bbf7",
+        "type": "ui_gauge",
+        "z": "ffc0f070.9208e",
+        "name": "Temperature",
+        "group": "bdba7049.4d8a38",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "deg C",
+        "format": "{{value}}",
+        "min": "-40",
+        "max": "-5",
+        "colors": [
+            "#00B500",
+            "#E6E600",
+            "#CA3838"
+        ],
+        "seg1": "-20",
+        "seg2": "-10",
+        "x": 777,
+        "y": 376,
+        "wires": []
+    },
+    {
+        "id": "7740c662.40cda8",
+        "type": "function",
+        "z": "ffc0f070.9208e",
+        "name": "Convert to float",
+        "func": "//var msg1 = parseFloat(msg.payload)\n//msg.payload = {}\n//msg.payload.temp = msg1\n//return msg;\n\nmsg.payload = Number(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 811,
+        "y": 333,
+        "wires": [
+            [
+                "258c72ef.36b006"
+            ]
+        ]
+    },
+    {
+        "id": "258c72ef.36b006",
+        "type": "smooth",
+        "z": "ffc0f070.9208e",
+        "name": "Calculate Mean",
+        "action": "mean",
+        "count": "24",
+        "round": "",
+        "mult": "single",
+        "x": 1054,
+        "y": 339,
+        "wires": [
+            [
+                "dc702679.b952e8"
+            ]
+        ]
+    },
+    {
+        "id": "dc702679.b952e8",
+        "type": "ui_chart",
+        "z": "ffc0f070.9208e",
+        "name": "Mean Temp 2 Hour MA",
+        "group": "bdba7049.4d8a38",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "label": "Mean Temp 2 Hour MA for last 24 hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1320,
+        "y": 336,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c05af611.f0af28",
+        "type": "function",
+        "z": "ffc0f070.9208e",
+        "name": "ambient temperature 4AA",
+        "func": "var msg1 = { payload: msg.payload[\"ambientTemperature\"] }\nvar uuid = { payload: msg.payload[\"uuid\"] }\nif (msg.payload[\"uuid\"] == \"0117c597916a\") {\n    return msg1;\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 497,
+        "y": 475,
+        "wires": [
+            [
+                "74180cf1.b8a45c",
+                "2e7e4522.a31d3a",
+                "338aaf1a.a1afd8",
+                "7fe9e48d.ee949c",
+                "99fb11bf.8dde08"
+            ]
+        ]
+    },
+    {
+        "id": "74180cf1.b8a45c",
+        "type": "ui_chart",
+        "z": "ffc0f070.9208e",
+        "name": "Temperature Last 24 Hours",
+        "group": "41987324.72b8fc",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Last 24 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1078,
+        "y": 520,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2e7e4522.a31d3a",
+        "type": "ui_chart",
+        "z": "ffc0f070.9208e",
+        "name": "Temperature Last 3 Hours",
+        "group": "41987324.72b8fc",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Last 3 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1407,
+        "y": 520,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "338aaf1a.a1afd8",
+        "type": "switch",
+        "z": "ffc0f070.9208e",
+        "name": "Temperature Threshold",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "-12",
+                "vt": "num"
+            },
+            {
+                "t": "gte",
+                "v": "-12",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 2,
+        "x": 834,
+        "y": 557,
+        "wires": [
+            [
+                "6fc07645.ebc438"
+            ],
+            [
+                "2af0925f.69640e"
+            ]
+        ]
+    },
+    {
+        "id": "6fc07645.ebc438",
+        "type": "template",
+        "z": "ffc0f070.9208e",
+        "name": "Temperature safe",
+        "field": "",
+        "fieldType": "msg",
+        "syntax": "mustache",
+        "template": "Temperature of 4AA ({{payload}}) within safe limits",
+        "output": "str",
+        "x": 1099,
+        "y": 559,
+        "wires": [
+            [
+                "e0145bf3.810f4"
+            ]
+        ]
+    },
+    {
+        "id": "2af0925f.69640e",
+        "type": "template",
+        "z": "ffc0f070.9208e",
+        "name": "Temperature too high",
+        "field": "",
+        "fieldType": "msg",
+        "syntax": "mustache",
+        "template": "Temperature of 4AA ({{payload}}) is too high!",
+        "output": "str",
+        "x": 1109,
+        "y": 593,
+        "wires": [
+            [
+                "e0145bf3.810f4",
+                "395f2b28.615f2c"
+            ]
+        ]
+    },
+    {
+        "id": "e0145bf3.810f4",
+        "type": "debug",
+        "z": "ffc0f070.9208e",
+        "name": "Freezer Status",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 1318,
+        "y": 571,
+        "wires": []
+    },
+    {
+        "id": "7fe9e48d.ee949c",
+        "type": "ui_gauge",
+        "z": "ffc0f070.9208e",
+        "name": "Temperature",
+        "group": "41987324.72b8fc",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "deg C",
+        "format": "{{value}}",
+        "min": "-40",
+        "max": "-5",
+        "colors": [
+            "#00B500",
+            "#E6E600",
+            "#CA3838"
+        ],
+        "seg1": "-20",
+        "seg2": "10",
+        "x": 799,
+        "y": 517,
+        "wires": []
+    },
+    {
+        "id": "99fb11bf.8dde08",
+        "type": "function",
+        "z": "ffc0f070.9208e",
+        "name": "Convert to float",
+        "func": "//var msg1 = parseFloat(msg.payload)\n//msg.payload = {}\n//msg.payload.temp = msg1\n//return msg;\n\nmsg.payload = Number(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 808,
+        "y": 479,
+        "wires": [
+            [
+                "25cd75f9.648052"
+            ]
+        ]
+    },
+    {
+        "id": "25cd75f9.648052",
+        "type": "smooth",
+        "z": "ffc0f070.9208e",
+        "name": "Calculate Mean",
+        "action": "mean",
+        "count": "24",
+        "round": "",
+        "mult": "single",
+        "x": 1051,
+        "y": 485,
+        "wires": [
+            [
+                "65482bdc.45bf84"
+            ]
+        ]
+    },
+    {
+        "id": "65482bdc.45bf84",
+        "type": "ui_chart",
+        "z": "ffc0f070.9208e",
+        "name": "Mean Temp 2 Hour MA",
+        "group": "41987324.72b8fc",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "label": "Mean Temp 2 Hour MA for last 24 hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1317,
+        "y": 482,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "16a7ef37.9e1d71",
+        "type": "function",
+        "z": "ffc0f070.9208e",
+        "name": "timestamp YUNZI",
+        "func": "var msg1 = { payload: msg.payload[\"time\"] }\nvar uuid = { payload: msg.payload[\"uuid\"] }\nif (msg.payload[\"uuid\"] == \"0117c536b80f\") {\n    return msg1;\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 515,
+        "y": 816,
+        "wires": [
+            [
+                "16df7b7e.5b67b5"
+            ]
+        ]
+    },
+    {
+        "id": "3f6ba557.ea84ea",
+        "type": "ui_text",
+        "z": "ffc0f070.9208e",
+        "group": "bdba7049.4d8a38",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "Last Reading",
+        "label": "<b>Last Reading</b>",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "x": 1069,
+        "y": 818,
+        "wires": []
+    },
+    {
+        "id": "205cda96.276c4e",
+        "type": "function",
+        "z": "ffc0f070.9208e",
+        "name": "timestamp 4AA",
+        "func": "var msg1 = { payload: msg.payload[\"time\"] }\nvar uuid = { payload: msg.payload[\"uuid\"] }\nif (msg.payload[\"uuid\"] == \"0117c597916a\") {\n    return msg1;\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 509,
+        "y": 865,
+        "wires": [
+            [
+                "dcb78a7b.f0345"
+            ]
+        ]
+    },
+    {
+        "id": "abaf7ffb.522ab8",
+        "type": "ui_text",
+        "z": "ffc0f070.9208e",
+        "group": "41987324.72b8fc",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "Last Reading",
+        "label": "<b>Last Reading</b>",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "x": 1065,
+        "y": 861,
+        "wires": []
+    },
+    {
+        "id": "ddf8c9a9.c33d",
+        "type": "moment",
+        "z": "ffc0f070.9208e",
+        "name": "",
+        "topic": "",
+        "input": "payload.date",
+        "inputType": "msg",
+        "inTz": "ETC/GMT",
+        "adjAmount": "1",
+        "adjType": "hours",
+        "adjDir": "add",
+        "format": "ddd, MMM Do, HH:mm:ss",
+        "locale": "en_gb",
+        "output": "",
+        "outputType": "msg",
+        "outTz": "ETC/GMT",
+        "x": 865.5,
+        "y": 767,
+        "wires": [
+            [
+                "a0097557.a0dd2"
+            ]
+        ]
+    },
+    {
+        "id": "a8ed0e33.6d91d",
+        "type": "function",
+        "z": "ffc0f070.9208e",
+        "name": "Date.parse",
+        "func": "var msg1 = Date.parse(msg.payload)\nmsg.payload = {}\nmsg.payload.date = msg1\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 676.5,
+        "y": 771,
+        "wires": [
+            [
+                "ddf8c9a9.c33d"
+            ]
+        ]
+    },
+    {
+        "id": "c3481d99.8077f",
+        "type": "moment",
+        "z": "ffc0f070.9208e",
+        "name": "",
+        "topic": "",
+        "input": "payload.date",
+        "inputType": "msg",
+        "inTz": "ETC/GMT",
+        "adjAmount": "1",
+        "adjType": "hours",
+        "adjDir": "add",
+        "format": "ddd, MMM Do, HH:mm:ss",
+        "locale": "en_gb",
+        "output": "",
+        "outputType": "msg",
+        "outTz": "ETC/GMT",
+        "x": 876,
+        "y": 816,
+        "wires": [
+            [
+                "3f6ba557.ea84ea"
+            ]
+        ]
+    },
+    {
+        "id": "16df7b7e.5b67b5",
+        "type": "function",
+        "z": "ffc0f070.9208e",
+        "name": "Date.parse",
+        "func": "var msg1 = Date.parse(msg.payload)\nmsg.payload = {}\nmsg.payload.date = msg1\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 677,
+        "y": 816,
+        "wires": [
+            [
+                "c3481d99.8077f"
+            ]
+        ]
+    },
+    {
+        "id": "48f6d5d6.f4e55c",
+        "type": "moment",
+        "z": "ffc0f070.9208e",
+        "name": "",
+        "topic": "",
+        "input": "payload.date",
+        "inputType": "msg",
+        "inTz": "ETC/GMT",
+        "adjAmount": "1",
+        "adjType": "hours",
+        "adjDir": "add",
+        "format": "ddd, MMM Do, HH:mm:ss",
+        "locale": "en_gb",
+        "output": "",
+        "outputType": "msg",
+        "outTz": "ETC/GMT",
+        "x": 867,
+        "y": 859,
+        "wires": [
+            [
+                "abaf7ffb.522ab8"
+            ]
+        ]
+    },
+    {
+        "id": "dcb78a7b.f0345",
+        "type": "function",
+        "z": "ffc0f070.9208e",
+        "name": "Date.parse",
+        "func": "var msg1 = Date.parse(msg.payload)\nmsg.payload = {}\nmsg.payload.date = msg1\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 678,
+        "y": 863,
+        "wires": [
+            [
+                "48f6d5d6.f4e55c"
+            ]
+        ]
+    },
+    {
+        "id": "48c96358.7dc87c",
+        "type": "function",
+        "z": "ffc0f070.9208e",
+        "name": "Battery Level YUNZI",
+        "func": "var msg1 = { payload: msg.payload[\"batteryLevel\"] }\nvar uuid = { payload: msg.payload[\"uuid\"] }\nif (msg.payload[\"uuid\"] == \"0117c536b80f\") {\n    return msg1;\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 878,
+        "y": 642,
+        "wires": [
+            [
+                "7f0cb0fb.46899",
+                "e20c68c2.8be6e"
+            ]
+        ]
+    },
+    {
+        "id": "7f0cb0fb.46899",
+        "type": "ui_gauge",
+        "z": "ffc0f070.9208e",
+        "name": "Battery Level",
+        "group": "bdba7049.4d8a38",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Battery Level 03",
+        "label": "",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "3500",
+        "colors": [
+            "#CA3838",
+            "#E6E600",
+            "#00B500"
+        ],
+        "seg1": "1500",
+        "seg2": "2500",
+        "x": 1312,
+        "y": 635,
+        "wires": []
+    },
+    {
+        "id": "e20c68c2.8be6e",
+        "type": "ui_chart",
+        "z": "ffc0f070.9208e",
+        "name": "Battery Level Last Year",
+        "group": "bdba7049.4d8a38",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "label": "Battery Level Last Year",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "52",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1106,
+        "y": 639,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e412f8dc.d9f778",
+        "type": "function",
+        "z": "ffc0f070.9208e",
+        "name": "Battery Level 4AA",
+        "func": "var msg1 = { payload: msg.payload[\"batteryLevel\"] }\nvar uuid = { payload: msg.payload[\"uuid\"] }\nif (msg.payload[\"uuid\"] == \"0117c597916a\") {\n    return msg1;\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 879,
+        "y": 688,
+        "wires": [
+            [
+                "6bfd7139.9ffd9",
+                "340bf4eb.2a0d4c"
+            ]
+        ]
+    },
+    {
+        "id": "6bfd7139.9ffd9",
+        "type": "ui_gauge",
+        "z": "ffc0f070.9208e",
+        "name": "Battery Level",
+        "group": "41987324.72b8fc",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Battery Level",
+        "label": "",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "3500",
+        "colors": [
+            "#CA3838",
+            "#E6E600",
+            "#00B500"
+        ],
+        "seg1": "1500",
+        "seg2": "2500",
+        "x": 1292,
+        "y": 675,
+        "wires": []
+    },
+    {
+        "id": "340bf4eb.2a0d4c",
+        "type": "ui_chart",
+        "z": "ffc0f070.9208e",
+        "name": "Battery Level Last Year",
+        "group": "41987324.72b8fc",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "label": "Battery Level Last Year",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "52",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1092,
+        "y": 682,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "6cc029ac.6f4b28",
+        "type": "mqtt in",
+        "z": "c25178d3.bb572",
+        "name": "HVS/Temps",
+        "topic": "hvs/temps",
+        "qos": "2",
+        "broker": "c330808b.7a3a2",
+        "x": 75,
+        "y": 513,
+        "wires": [
+            [
+                "d2d06cea.c3e59"
+            ]
+        ]
+    },
+    {
+        "id": "d2d06cea.c3e59",
+        "type": "json",
+        "z": "c25178d3.bb572",
+        "name": "",
+        "pretty": true,
+        "x": 216.5,
+        "y": 508,
+        "wires": [
+            [
+                "70b14eeb.9655b8",
+                "4646c823.4e84c",
+                "103440f5.8b8297",
+                "b4128091.0eb6a",
+                "7afb0d8.6f21674",
+                "ef5695be.4f6be8",
+                "7983804d.14a938",
+                "f217d59b.fa4db8",
+                "f28120a3.915a68",
+                "e2bf9156.5d96c",
+                "2e39a5ae.8f5c3a",
+                "6bef8daf.6f67c4",
+                "5788d6a4.de40b",
+                "9bae36f0.e18478",
+                "59f56e49.165d2",
+                "c468ce51.db5c2",
+                "c098452b.232b98"
+            ]
+        ]
+    },
+    {
+        "id": "70b14eeb.9655b8",
+        "type": "debug",
+        "z": "c25178d3.bb572",
+        "name": "Temps JSON",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 135.5,
+        "y": 376,
+        "wires": []
+    },
+    {
+        "id": "4646c823.4e84c",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "ambient temperature 07",
+        "func": "var msg1 = { payload: msg.payload[\"ambientTemperature\"] }\nvar uuid = { payload: msg.payload[\"uuid\"] }\nif (msg.payload[\"uuid\"] == \"bc6a29ab3b07\") {\n    return msg1;\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 487.5,
+        "y": 28,
+        "wires": [
+            [
+                "baf46ed7.b5f1a8",
+                "a2ce6b5d.ab43f",
+                "ed7ceb7f.695ce",
+                "75b4dc02.9c2a2c",
+                "7d82b27a.bf7bac"
+            ]
+        ]
+    },
+    {
+        "id": "baf46ed7.b5f1a8",
+        "type": "ui_gauge",
+        "z": "c25178d3.bb572",
+        "name": "Temperature 07",
+        "group": "edecae1f.7d1e28",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature 07",
+        "label": "deg C",
+        "format": "{{value}}",
+        "min": "-5",
+        "max": "15",
+        "colors": [
+            "#E6E600",
+            "#00B500",
+            "#CA3838"
+        ],
+        "seg1": "1",
+        "seg2": "8",
+        "x": 780.5,
+        "y": 64,
+        "wires": []
+    },
+    {
+        "id": "a2ce6b5d.ab43f",
+        "type": "ui_chart",
+        "z": "c25178d3.bb572",
+        "name": "Temperature Last 24 Hours",
+        "group": "edecae1f.7d1e28",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Last 24 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1057.5,
+        "y": 64,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "103440f5.8b8297",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "timestamp 07",
+        "func": "var msg1 = { payload: msg.payload[\"time\"] }\nvar uuid = { payload: msg.payload[\"uuid\"] }\nif (msg.payload[\"uuid\"] == \"bc6a29ab3b07\") {\n    return msg1;\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 331.5,
+        "y": 1035,
+        "wires": [
+            [
+                "d977edb6.959b58"
+            ]
+        ]
+    },
+    {
+        "id": "1d2d19b7.3c5ee6",
+        "type": "ui_text",
+        "z": "c25178d3.bb572",
+        "group": "edecae1f.7d1e28",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "Last Reading 07",
+        "label": "<b>Last Reading</b>",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "x": 894.5,
+        "y": 1031,
+        "wires": []
+    },
+    {
+        "id": "96777557.ddb2f8",
+        "type": "mysql",
+        "z": "c25178d3.bb572",
+        "mydb": "842cc29f.a1c33",
+        "name": "HVS MySQL",
+        "x": 121.5,
+        "y": 759,
+        "wires": [
+            [
+                "319ec084.422858"
+            ]
+        ]
+    },
+    {
+        "id": "b4128091.0eb6a",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "INSERT",
+        "func": "var uuid = JSON.stringify(msg.payload[\"uuid\"])\nvar time = JSON.stringify(msg.payload[\"time\"])\nvar at = JSON.stringify(msg.payload[\"ambientTemperature\"])\nvar ot = JSON.stringify(msg.payload[\"objectTemperature\"])\nvar loc = JSON.stringify(msg.payload[\"loc\"])\nvar lux = JSON.stringify(msg.payload[\"lux\"])\nvar batteryLevel = JSON.stringify(msg.payload[\"batteryLevel\"])\n\nmsg.topic = \"INSERT INTO temperatures (uuid, time, at, ot, loc, lux, batterylevel) values (\" + uuid + \", \" + time + \", \" + at + \", \" + ot + \", \" + loc + \", \" + lux + \", \" + batteryLevel + \")\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 117.5,
+        "y": 696,
+        "wires": [
+            [
+                "96777557.ddb2f8"
+            ]
+        ]
+    },
+    {
+        "id": "319ec084.422858",
+        "type": "debug",
+        "z": "c25178d3.bb572",
+        "name": "MySQL Response",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 120.5,
+        "y": 821,
+        "wires": []
+    },
+    {
+        "id": "ed7ceb7f.695ce",
+        "type": "ui_chart",
+        "z": "c25178d3.bb572",
+        "name": "Temperature Last 3 Hours",
+        "group": "edecae1f.7d1e28",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Last 3 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1363,
+        "y": 62,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "75b4dc02.9c2a2c",
+        "type": "switch",
+        "z": "c25178d3.bb572",
+        "name": "Temperature Threshold",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "8",
+                "vt": "num"
+            },
+            {
+                "t": "gte",
+                "v": "8",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 2,
+        "x": 809,
+        "y": 108,
+        "wires": [
+            [
+                "c9286dfa.a7de78"
+            ],
+            [
+                "edb2521.9dc6c3"
+            ]
+        ]
+    },
+    {
+        "id": "c9286dfa.a7de78",
+        "type": "template",
+        "z": "c25178d3.bb572",
+        "name": "Temperature safe",
+        "field": "",
+        "fieldType": "msg",
+        "syntax": "mustache",
+        "template": "Temperature ({{payload}}) within safe limits",
+        "output": "str",
+        "x": 1077,
+        "y": 100,
+        "wires": [
+            [
+                "472c68e2.395338"
+            ]
+        ]
+    },
+    {
+        "id": "edb2521.9dc6c3",
+        "type": "template",
+        "z": "c25178d3.bb572",
+        "name": "Temperature too high",
+        "field": "",
+        "fieldType": "msg",
+        "syntax": "mustache",
+        "template": "Temperature ({{payload}}) is too high!",
+        "output": "str",
+        "x": 1083,
+        "y": 140,
+        "wires": [
+            [
+                "472c68e2.395338"
+            ]
+        ]
+    },
+    {
+        "id": "472c68e2.395338",
+        "type": "debug",
+        "z": "c25178d3.bb572",
+        "name": "Fridge Status",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 1291,
+        "y": 114,
+        "wires": []
+    },
+    {
+        "id": "7afb0d8.6f21674",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "ambient temperature 03",
+        "func": "var msg1 = { payload: msg.payload[\"ambientTemperature\"] }\nvar uuid = { payload: msg.payload[\"uuid\"] }\nif (msg.payload[\"uuid\"] == \"b09122f67303\") {\n    return msg1;\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 497,
+        "y": 182,
+        "wires": [
+            [
+                "217fa0e7.25588",
+                "16390491.82f6c3",
+                "dddbfc3a.5b00f8",
+                "b6b25cf9.38a2d",
+                "fe248704.aa9c2",
+                "bb0eb6c6.3f0148"
+            ]
+        ]
+    },
+    {
+        "id": "ef5695be.4f6be8",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "ambient temperature d3",
+        "func": "var msg1 = { payload: msg.payload[\"ambientTemperature\"] }\nvar uuid = { payload: msg.payload[\"uuid\"] }\nif (msg.payload[\"uuid\"] == \"bc6a29abebd3\") {\n    return msg1;\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 496,
+        "y": 333,
+        "wires": [
+            [
+                "4597248f.4850bc",
+                "f7236b15.b51b28",
+                "986174cd.6013f",
+                "81e4144e.aea58",
+                "c70efbf7.1c9ef"
+            ]
+        ]
+    },
+    {
+        "id": "4597248f.4850bc",
+        "type": "ui_chart",
+        "z": "c25178d3.bb572",
+        "name": "Temperature Last 24 Hours d3",
+        "group": "cfd25838.3de4c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Last 24 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1087,
+        "y": 378,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f7236b15.b51b28",
+        "type": "ui_chart",
+        "z": "c25178d3.bb572",
+        "name": "Temperature Last 3 Hours d3",
+        "group": "cfd25838.3de4c",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Last 3 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1416,
+        "y": 378,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "7983804d.14a938",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "timestamp 03",
+        "func": "var msg1 = { payload: msg.payload[\"time\"] }\nvar uuid = { payload: msg.payload[\"uuid\"] }\nif (msg.payload[\"uuid\"] == \"b09122f67303\") {\n    return msg1;\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 329,
+        "y": 993,
+        "wires": [
+            [
+                "fb45197e.c40c78"
+            ]
+        ]
+    },
+    {
+        "id": "f217d59b.fa4db8",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "timestamp d3",
+        "func": "var msg1 = { payload: msg.payload[\"time\"] }\nvar uuid = { payload: msg.payload[\"uuid\"] }\nif (msg.payload[\"uuid\"] == \"bc6a29abebd3\") {\n    return msg1;\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 327,
+        "y": 944,
+        "wires": [
+            [
+                "a5a62b8b.eb4c3"
+            ]
+        ]
+    },
+    {
+        "id": "a5a62b8b.eb4c3",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "Date.parse",
+        "func": "var msg1 = Date.parse(msg.payload)\nmsg.payload = {}\nmsg.payload.date = msg1\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 950,
+        "wires": [
+            [
+                "20b76433.c11b0c"
+            ]
+        ]
+    },
+    {
+        "id": "20b76433.c11b0c",
+        "type": "moment",
+        "z": "c25178d3.bb572",
+        "name": "",
+        "topic": "",
+        "input": "payload.date",
+        "inputType": "msg",
+        "inTz": "ETC/GMT",
+        "adjAmount": "1",
+        "adjType": "hours",
+        "adjDir": "add",
+        "format": "ddd, MMM Do, HH:mm:ss",
+        "locale": "en_gb",
+        "output": "",
+        "outputType": "msg",
+        "outTz": "ETC/GMT",
+        "x": 683,
+        "y": 950,
+        "wires": [
+            [
+                "f4b43343.fb35f"
+            ]
+        ]
+    },
+    {
+        "id": "f4b43343.fb35f",
+        "type": "ui_text",
+        "z": "c25178d3.bb572",
+        "group": "cfd25838.3de4c",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "Last Reading d3",
+        "label": "<b>Last Reading</b>",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "x": 892,
+        "y": 944,
+        "wires": []
+    },
+    {
+        "id": "f28120a3.915a68",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "Battery Level 03",
+        "func": "var msg1 = { payload: msg.payload[\"batteryLevel\"] }\nvar uuid = { payload: msg.payload[\"uuid\"] }\nif (msg.payload[\"uuid\"] == \"b09122f67303\") {\n    return msg1;\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1121,
+        "y": 943,
+        "wires": [
+            [
+                "e365f306.085f1",
+                "fd1768bb.f04268"
+            ]
+        ]
+    },
+    {
+        "id": "986174cd.6013f",
+        "type": "switch",
+        "z": "c25178d3.bb572",
+        "name": "Temperature Threshold",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "-12",
+                "vt": "num"
+            },
+            {
+                "t": "gte",
+                "v": "-12",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 2,
+        "x": 833,
+        "y": 415,
+        "wires": [
+            [
+                "a44a0c1a.26dc1"
+            ],
+            [
+                "e5fff93e.91aae"
+            ]
+        ]
+    },
+    {
+        "id": "a44a0c1a.26dc1",
+        "type": "template",
+        "z": "c25178d3.bb572",
+        "name": "Temperature safe",
+        "field": "",
+        "fieldType": "msg",
+        "syntax": "mustache",
+        "template": "Temperature ({{payload}}) within safe limits",
+        "output": "str",
+        "x": 1098,
+        "y": 417,
+        "wires": [
+            [
+                "8f884db1.d848f8"
+            ]
+        ]
+    },
+    {
+        "id": "e5fff93e.91aae",
+        "type": "template",
+        "z": "c25178d3.bb572",
+        "name": "Temperature too high",
+        "field": "",
+        "fieldType": "msg",
+        "syntax": "mustache",
+        "template": "Temperature ({{payload}}) is too high!",
+        "output": "str",
+        "x": 1108,
+        "y": 451,
+        "wires": [
+            [
+                "8f884db1.d848f8"
+            ]
+        ]
+    },
+    {
+        "id": "8f884db1.d848f8",
+        "type": "debug",
+        "z": "c25178d3.bb572",
+        "name": "Freezer Status",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 1317,
+        "y": 429,
+        "wires": []
+    },
+    {
+        "id": "a913a714.f2d0a",
+        "type": "smooth",
+        "z": "c25178d3.bb572",
+        "name": "Calculate Mean",
+        "action": "mean",
+        "count": "24",
+        "round": "",
+        "mult": "single",
+        "x": 982.5,
+        "y": 25,
+        "wires": [
+            [
+                "bcc6c690.618"
+            ]
+        ]
+    },
+    {
+        "id": "217fa0e7.25588",
+        "type": "switch",
+        "z": "c25178d3.bb572",
+        "name": "Temperature Threshold",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "-12",
+                "vt": "num"
+            },
+            {
+                "t": "gte",
+                "v": "-12",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 2,
+        "x": 825,
+        "y": 268,
+        "wires": [
+            [
+                "425e45d4.175ef4"
+            ],
+            [
+                "b153feee.1bac38"
+            ]
+        ]
+    },
+    {
+        "id": "425e45d4.175ef4",
+        "type": "template",
+        "z": "c25178d3.bb572",
+        "name": "Temperature safe",
+        "field": "",
+        "fieldType": "msg",
+        "syntax": "mustache",
+        "template": "Temperature ({{payload}}) within safe limits",
+        "output": "str",
+        "x": 1090,
+        "y": 265,
+        "wires": [
+            [
+                "65f5d83d.63731"
+            ]
+        ]
+    },
+    {
+        "id": "b153feee.1bac38",
+        "type": "template",
+        "z": "c25178d3.bb572",
+        "name": "Temperature too high",
+        "field": "",
+        "fieldType": "msg",
+        "syntax": "mustache",
+        "template": "Temperature ({{payload}}) is too high!",
+        "output": "str",
+        "x": 1098,
+        "y": 305,
+        "wires": [
+            [
+                "65f5d83d.63731"
+            ]
+        ]
+    },
+    {
+        "id": "65f5d83d.63731",
+        "type": "debug",
+        "z": "c25178d3.bb572",
+        "name": "Freezer Status",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 1301,
+        "y": 276,
+        "wires": []
+    },
+    {
+        "id": "7d82b27a.bf7bac",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "Convert to float",
+        "func": "//var msg1 = parseFloat(msg.payload)\n//msg.payload = {}\n//msg.payload.temp = msg1\n//return msg;\n\nmsg.payload = Number(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 785.5,
+        "y": 24,
+        "wires": [
+            [
+                "a913a714.f2d0a"
+            ]
+        ]
+    },
+    {
+        "id": "16390491.82f6c3",
+        "type": "offline",
+        "z": "c25178d3.bb572",
+        "name": "03 Status",
+        "time": "600",
+        "defaultTopic": "",
+        "x": 502.5,
+        "y": 240,
+        "wires": [
+            [
+                "99fceaea.ebeb3"
+            ]
+        ]
+    },
+    {
+        "id": "99fceaea.ebeb3",
+        "type": "debug",
+        "z": "c25178d3.bb572",
+        "name": "03 Status",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 521.5,
+        "y": 290,
+        "wires": []
+    },
+    {
+        "id": "bcc6c690.618",
+        "type": "ui_chart",
+        "z": "c25178d3.bb572",
+        "name": "Mean Temp 2 Hour MA",
+        "group": "edecae1f.7d1e28",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Mean Temp 2 Hour MA for last 24 hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1204.5,
+        "y": 20,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "81e4144e.aea58",
+        "type": "ui_gauge",
+        "z": "c25178d3.bb572",
+        "name": "Ambient Temperature d3",
+        "group": "cfd25838.3de4c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature d3",
+        "label": "deg C",
+        "format": "{{value}}",
+        "min": "-5",
+        "max": "15",
+        "colors": [
+            "#E6E600",
+            "#00B500",
+            "#CA3838"
+        ],
+        "seg1": "1",
+        "seg2": "8",
+        "x": 838,
+        "y": 375,
+        "wires": []
+    },
+    {
+        "id": "8de03dd2.fddcc",
+        "type": "ui_text",
+        "z": "c25178d3.bb572",
+        "group": "7763213b.3528e",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "Last Reading 03",
+        "label": "<b>Last Reading</b>",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "x": 895,
+        "y": 988,
+        "wires": []
+    },
+    {
+        "id": "e365f306.085f1",
+        "type": "ui_gauge",
+        "z": "c25178d3.bb572",
+        "name": "Battery Level 03",
+        "group": "7763213b.3528e",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Battery Level 03",
+        "label": "",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#CA3838",
+            "#E6E600",
+            "#00B500"
+        ],
+        "seg1": "50",
+        "seg2": "60",
+        "x": 1554,
+        "y": 934,
+        "wires": []
+    },
+    {
+        "id": "dddbfc3a.5b00f8",
+        "type": "ui_gauge",
+        "z": "c25178d3.bb572",
+        "name": "Temperature 03",
+        "group": "7763213b.3528e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature 03",
+        "label": "deg C",
+        "format": "{{value}}",
+        "min": "-5",
+        "max": "15",
+        "colors": [
+            "#E6E600",
+            "#00B500",
+            "#CA3838"
+        ],
+        "seg1": "1",
+        "seg2": "8",
+        "x": 793,
+        "y": 224,
+        "wires": []
+    },
+    {
+        "id": "b6b25cf9.38a2d",
+        "type": "ui_chart",
+        "z": "c25178d3.bb572",
+        "name": "Temperature Last 24 Hours 03",
+        "group": "7763213b.3528e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Last 24 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1074,
+        "y": 222,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "fe248704.aa9c2",
+        "type": "ui_chart",
+        "z": "c25178d3.bb572",
+        "name": "Temperature Last 3 Hours 03",
+        "group": "7763213b.3528e",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Last 3 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1401,
+        "y": 220,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "fd1768bb.f04268",
+        "type": "ui_chart",
+        "z": "c25178d3.bb572",
+        "name": "Battery Level 24 Hours 03",
+        "group": "7763213b.3528e",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "label": "Battery Level 24 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1343,
+        "y": 940,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "bb0eb6c6.3f0148",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "Convert to float",
+        "func": "//var msg1 = parseFloat(msg.payload)\n//msg.payload = {}\n//msg.payload.temp = msg1\n//return msg;\n\nmsg.payload = Number(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 797,
+        "y": 182,
+        "wires": [
+            [
+                "1ee61b3c.4d30cd"
+            ]
+        ]
+    },
+    {
+        "id": "1ee61b3c.4d30cd",
+        "type": "smooth",
+        "z": "c25178d3.bb572",
+        "name": "Calculate Mean",
+        "action": "mean",
+        "count": "24",
+        "round": "",
+        "mult": "single",
+        "x": 988,
+        "y": 183,
+        "wires": [
+            [
+                "8c283b9.8a19448"
+            ]
+        ]
+    },
+    {
+        "id": "8c283b9.8a19448",
+        "type": "ui_chart",
+        "z": "c25178d3.bb572",
+        "name": "Mean Temp 2 Hour MA",
+        "group": "7763213b.3528e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "label": "Mean Temp 2 Hour MA for last 24 hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1215,
+        "y": 183,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c70efbf7.1c9ef",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "Convert to float",
+        "func": "//var msg1 = parseFloat(msg.payload)\n//msg.payload = {}\n//msg.payload.temp = msg1\n//return msg;\n\nmsg.payload = Number(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 807,
+        "y": 337,
+        "wires": [
+            [
+                "251efa40.9e61ce"
+            ]
+        ]
+    },
+    {
+        "id": "251efa40.9e61ce",
+        "type": "smooth",
+        "z": "c25178d3.bb572",
+        "name": "Calculate Mean",
+        "action": "mean",
+        "count": "24",
+        "round": "",
+        "mult": "single",
+        "x": 1050,
+        "y": 343,
+        "wires": [
+            [
+                "68e5bce6.a62e54"
+            ]
+        ]
+    },
+    {
+        "id": "68e5bce6.a62e54",
+        "type": "ui_chart",
+        "z": "c25178d3.bb572",
+        "name": "Mean Temp 2 Hour MA",
+        "group": "cfd25838.3de4c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Mean Temp 2 Hour MA for last 24 hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1316,
+        "y": 340,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e2bf9156.5d96c",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "ambient temperature YUNZI",
+        "func": "var msg1 = { payload: msg.payload[\"ambientTemperature\"] }\nvar uuid = { payload: msg.payload[\"uuid\"] }\nif (msg.payload[\"uuid\"] == \"0117c536b80f\") {\n    return msg1;\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 505,
+        "y": 480,
+        "wires": [
+            [
+                "e79763bb.5c31f8",
+                "b166bcff.58c0b",
+                "a58ee542.9ae1c",
+                "c9ffb32a.ad7b",
+                "64ae5778.351ca8"
+            ]
+        ]
+    },
+    {
+        "id": "e79763bb.5c31f8",
+        "type": "ui_chart",
+        "z": "c25178d3.bb572",
+        "name": "Temperature Last 24 Hours",
+        "group": "bdba7049.4d8a38",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Last 24 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1076,
+        "y": 525,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b166bcff.58c0b",
+        "type": "ui_chart",
+        "z": "c25178d3.bb572",
+        "name": "Temperature Last 3 Hours d3",
+        "group": "bdba7049.4d8a38",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Last 3 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1415,
+        "y": 525,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a58ee542.9ae1c",
+        "type": "switch",
+        "z": "c25178d3.bb572",
+        "name": "Temperature Threshold",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "-12",
+                "vt": "num"
+            },
+            {
+                "t": "gte",
+                "v": "-12",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 2,
+        "x": 832,
+        "y": 562,
+        "wires": [
+            [
+                "70d3279c.9920a8"
+            ],
+            [
+                "7d21aa2b.51431c"
+            ]
+        ]
+    },
+    {
+        "id": "70d3279c.9920a8",
+        "type": "template",
+        "z": "c25178d3.bb572",
+        "name": "Temperature safe",
+        "field": "",
+        "fieldType": "msg",
+        "syntax": "mustache",
+        "template": "Temperature ({{payload}}) within safe limits",
+        "output": "str",
+        "x": 1097,
+        "y": 564,
+        "wires": [
+            [
+                "d6b2c8db.7f5c68"
+            ]
+        ]
+    },
+    {
+        "id": "7d21aa2b.51431c",
+        "type": "template",
+        "z": "c25178d3.bb572",
+        "name": "Temperature too high",
+        "field": "",
+        "fieldType": "msg",
+        "syntax": "mustache",
+        "template": "Temperature ({{payload}}) is too high!",
+        "output": "str",
+        "x": 1107,
+        "y": 598,
+        "wires": [
+            [
+                "d6b2c8db.7f5c68"
+            ]
+        ]
+    },
+    {
+        "id": "d6b2c8db.7f5c68",
+        "type": "debug",
+        "z": "c25178d3.bb572",
+        "name": "Freezer Status",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 1316,
+        "y": 576,
+        "wires": []
+    },
+    {
+        "id": "c9ffb32a.ad7b",
+        "type": "ui_gauge",
+        "z": "c25178d3.bb572",
+        "name": "Temperature",
+        "group": "bdba7049.4d8a38",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "deg C",
+        "format": "{{value}}",
+        "min": "-30",
+        "max": "-5",
+        "colors": [
+            "#00B500",
+            "#E6E600",
+            "#CA3838"
+        ],
+        "seg1": "-20",
+        "seg2": "-10",
+        "x": 772,
+        "y": 527,
+        "wires": []
+    },
+    {
+        "id": "64ae5778.351ca8",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "Convert to float",
+        "func": "//var msg1 = parseFloat(msg.payload)\n//msg.payload = {}\n//msg.payload.temp = msg1\n//return msg;\n\nmsg.payload = Number(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 806,
+        "y": 484,
+        "wires": [
+            [
+                "e30476ee.9bbd"
+            ]
+        ]
+    },
+    {
+        "id": "e30476ee.9bbd",
+        "type": "smooth",
+        "z": "c25178d3.bb572",
+        "name": "Calculate Mean",
+        "action": "mean",
+        "count": "24",
+        "round": "",
+        "mult": "single",
+        "x": 1049,
+        "y": 490,
+        "wires": [
+            [
+                "9b57fcec.ce087"
+            ]
+        ]
+    },
+    {
+        "id": "9b57fcec.ce087",
+        "type": "ui_chart",
+        "z": "c25178d3.bb572",
+        "name": "Mean Temp 2 Hour MA",
+        "group": "bdba7049.4d8a38",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "label": "Mean Temp 2 Hour MA for last 24 hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1315,
+        "y": 487,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2e39a5ae.8f5c3a",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "ambient temperature 4AA",
+        "func": "var msg1 = { payload: msg.payload[\"ambientTemperature\"] }\nvar uuid = { payload: msg.payload[\"uuid\"] }\nif (msg.payload[\"uuid\"] == \"0117c597916a\") {\n    return msg1;\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 492,
+        "y": 626,
+        "wires": [
+            [
+                "2b55682f.f95b38",
+                "4c93194.c80be68",
+                "db6996ad.8b1f4",
+                "7e9b6808.8d47e8",
+                "1d414d46.498923"
+            ]
+        ]
+    },
+    {
+        "id": "2b55682f.f95b38",
+        "type": "ui_chart",
+        "z": "c25178d3.bb572",
+        "name": "Temperature Last 24 Hours",
+        "group": "41987324.72b8fc",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Last 24 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1073,
+        "y": 671,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "4c93194.c80be68",
+        "type": "ui_chart",
+        "z": "c25178d3.bb572",
+        "name": "Temperature Last 3 Hours",
+        "group": "41987324.72b8fc",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Last 3 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1402,
+        "y": 671,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "db6996ad.8b1f4",
+        "type": "switch",
+        "z": "c25178d3.bb572",
+        "name": "Temperature Threshold",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "-12",
+                "vt": "num"
+            },
+            {
+                "t": "gte",
+                "v": "-12",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 2,
+        "x": 829,
+        "y": 708,
+        "wires": [
+            [
+                "a2c289a0.4e7a88"
+            ],
+            [
+                "eaab48f2.afa84"
+            ]
+        ]
+    },
+    {
+        "id": "a2c289a0.4e7a88",
+        "type": "template",
+        "z": "c25178d3.bb572",
+        "name": "Temperature safe",
+        "field": "",
+        "fieldType": "msg",
+        "syntax": "mustache",
+        "template": "Temperature ({{payload}}) within safe limits",
+        "output": "str",
+        "x": 1094,
+        "y": 710,
+        "wires": [
+            [
+                "953af173.531ac"
+            ]
+        ]
+    },
+    {
+        "id": "eaab48f2.afa84",
+        "type": "template",
+        "z": "c25178d3.bb572",
+        "name": "Temperature too high",
+        "field": "",
+        "fieldType": "msg",
+        "syntax": "mustache",
+        "template": "Temperature ({{payload}}) is too high!",
+        "output": "str",
+        "x": 1104,
+        "y": 744,
+        "wires": [
+            [
+                "953af173.531ac"
+            ]
+        ]
+    },
+    {
+        "id": "953af173.531ac",
+        "type": "debug",
+        "z": "c25178d3.bb572",
+        "name": "Freezer Status",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 1313,
+        "y": 722,
+        "wires": []
+    },
+    {
+        "id": "7e9b6808.8d47e8",
+        "type": "ui_gauge",
+        "z": "c25178d3.bb572",
+        "name": "Temperature",
+        "group": "41987324.72b8fc",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "deg C",
+        "format": "{{value}}",
+        "min": "-30",
+        "max": "-5",
+        "colors": [
+            "#00B500",
+            "#E6E600",
+            "#CA3838"
+        ],
+        "seg1": "-20",
+        "seg2": "10",
+        "x": 794,
+        "y": 668,
+        "wires": []
+    },
+    {
+        "id": "1d414d46.498923",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "Convert to float",
+        "func": "//var msg1 = parseFloat(msg.payload)\n//msg.payload = {}\n//msg.payload.temp = msg1\n//return msg;\n\nmsg.payload = Number(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 803,
+        "y": 630,
+        "wires": [
+            [
+                "543372c9.7ff554"
+            ]
+        ]
+    },
+    {
+        "id": "543372c9.7ff554",
+        "type": "smooth",
+        "z": "c25178d3.bb572",
+        "name": "Calculate Mean",
+        "action": "mean",
+        "count": "24",
+        "round": "",
+        "mult": "single",
+        "x": 1046,
+        "y": 636,
+        "wires": [
+            [
+                "1c53bd50.d7ecb3"
+            ]
+        ]
+    },
+    {
+        "id": "1c53bd50.d7ecb3",
+        "type": "ui_chart",
+        "z": "c25178d3.bb572",
+        "name": "Mean Temp 2 Hour MA",
+        "group": "41987324.72b8fc",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "label": "Mean Temp 2 Hour MA for last 24 hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1312,
+        "y": 633,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "6bef8daf.6f67c4",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "ambient temperature USB",
+        "func": "var msg1 = { payload: msg.payload[\"ambientTemperature\"] }\nvar uuid = { payload: msg.payload[\"uuid\"] }\nif (msg.payload[\"uuid\"] == \"0117c58898b8\") {\n    return msg1;\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 506,
+        "y": 775,
+        "wires": [
+            [
+                "f8574206.c1a0b",
+                "b3203063.792c1",
+                "bdb66055.9e0f18",
+                "1113e6f3.305269",
+                "a5da3db0.3342e8"
+            ]
+        ]
+    },
+    {
+        "id": "f8574206.c1a0b",
+        "type": "ui_chart",
+        "z": "c25178d3.bb572",
+        "name": "Temperature Last 24 Hours d3",
+        "group": "772f375b.30708",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Last 24 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1097,
+        "y": 820,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b3203063.792c1",
+        "type": "ui_chart",
+        "z": "c25178d3.bb572",
+        "name": "Temperature Last 3 Hours d3",
+        "group": "772f375b.30708",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Last 3 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1426,
+        "y": 820,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "bdb66055.9e0f18",
+        "type": "switch",
+        "z": "c25178d3.bb572",
+        "name": "Temperature Threshold",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "-12",
+                "vt": "num"
+            },
+            {
+                "t": "gte",
+                "v": "-12",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 2,
+        "x": 843,
+        "y": 857,
+        "wires": [
+            [
+                "b896e4d7.564d48"
+            ],
+            [
+                "19cdf059.99a5b8"
+            ]
+        ]
+    },
+    {
+        "id": "b896e4d7.564d48",
+        "type": "template",
+        "z": "c25178d3.bb572",
+        "name": "Temperature safe",
+        "field": "",
+        "fieldType": "msg",
+        "syntax": "mustache",
+        "template": "Temperature ({{payload}}) within safe limits",
+        "output": "str",
+        "x": 1108,
+        "y": 859,
+        "wires": [
+            [
+                "7ca47edc.43efd"
+            ]
+        ]
+    },
+    {
+        "id": "19cdf059.99a5b8",
+        "type": "template",
+        "z": "c25178d3.bb572",
+        "name": "Temperature too high",
+        "field": "",
+        "fieldType": "msg",
+        "syntax": "mustache",
+        "template": "Temperature ({{payload}}) is too high!",
+        "output": "str",
+        "x": 1118,
+        "y": 893,
+        "wires": [
+            [
+                "7ca47edc.43efd"
+            ]
+        ]
+    },
+    {
+        "id": "7ca47edc.43efd",
+        "type": "debug",
+        "z": "c25178d3.bb572",
+        "name": "Freezer Status",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 1327,
+        "y": 871,
+        "wires": []
+    },
+    {
+        "id": "1113e6f3.305269",
+        "type": "ui_gauge",
+        "z": "c25178d3.bb572",
+        "name": "Temperature",
+        "group": "772f375b.30708",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature d3",
+        "label": "deg C",
+        "format": "{{value}}",
+        "min": "-5",
+        "max": "15",
+        "colors": [
+            "#E6E600",
+            "#00B500",
+            "#CA3838"
+        ],
+        "seg1": "1",
+        "seg2": "8",
+        "x": 808,
+        "y": 817,
+        "wires": []
+    },
+    {
+        "id": "a5da3db0.3342e8",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "Convert to float",
+        "func": "//var msg1 = parseFloat(msg.payload)\n//msg.payload = {}\n//msg.payload.temp = msg1\n//return msg;\n\nmsg.payload = Number(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 817,
+        "y": 779,
+        "wires": [
+            [
+                "b76cdf4d.81dbb"
+            ]
+        ]
+    },
+    {
+        "id": "b76cdf4d.81dbb",
+        "type": "smooth",
+        "z": "c25178d3.bb572",
+        "name": "Calculate Mean",
+        "action": "mean",
+        "count": "24",
+        "round": "",
+        "mult": "single",
+        "x": 1060,
+        "y": 785,
+        "wires": [
+            [
+                "e97183d7.31b7"
+            ]
+        ]
+    },
+    {
+        "id": "e97183d7.31b7",
+        "type": "ui_chart",
+        "z": "c25178d3.bb572",
+        "name": "Mean Temp 2 Hour MA",
+        "group": "772f375b.30708",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Mean Temp 2 Hour MA for last 24 hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1326,
+        "y": 782,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "59f56e49.165d2",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "timestamp USB",
+        "func": "var msg1 = { payload: msg.payload[\"time\"] }\nvar uuid = { payload: msg.payload[\"uuid\"] }\nif (msg.payload[\"uuid\"] == \"0117c58898b8\") {\n    return msg1;\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 331,
+        "y": 1173,
+        "wires": [
+            [
+                "11d0befb.cf53c1"
+            ]
+        ]
+    },
+    {
+        "id": "368daf74.09c688",
+        "type": "ui_text",
+        "z": "c25178d3.bb572",
+        "group": "772f375b.30708",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "Last Reading",
+        "label": "<b>Last Reading</b>",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "x": 893,
+        "y": 1169,
+        "wires": []
+    },
+    {
+        "id": "70c75d6e.2f1514",
+        "type": "moment",
+        "z": "c25178d3.bb572",
+        "name": "",
+        "topic": "",
+        "input": "payload.date",
+        "inputType": "msg",
+        "inTz": "ETC/GMT",
+        "adjAmount": "1",
+        "adjType": "hours",
+        "adjDir": "add",
+        "format": "ddd, MMM Do, HH:mm:ss",
+        "locale": "en_gb",
+        "output": "",
+        "outputType": "msg",
+        "outTz": "ETC/GMT",
+        "x": 694,
+        "y": 1170,
+        "wires": [
+            [
+                "368daf74.09c688"
+            ]
+        ]
+    },
+    {
+        "id": "11d0befb.cf53c1",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "Date.parse",
+        "func": "var msg1 = Date.parse(msg.payload)\nmsg.payload = {}\nmsg.payload.date = msg1\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 500,
+        "y": 1173,
+        "wires": [
+            [
+                "70c75d6e.2f1514"
+            ]
+        ]
+    },
+    {
+        "id": "5788d6a4.de40b",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "timestamp YUNZI",
+        "func": "var msg1 = { payload: msg.payload[\"time\"] }\nvar uuid = { payload: msg.payload[\"uuid\"] }\nif (msg.payload[\"uuid\"] == \"0117c536b80f\") {\n    return msg1;\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 336,
+        "y": 1078,
+        "wires": [
+            [
+                "8a1880f7.08e67"
+            ]
+        ]
+    },
+    {
+        "id": "e56d07da.e80308",
+        "type": "ui_text",
+        "z": "c25178d3.bb572",
+        "group": "bdba7049.4d8a38",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "Last Reading",
+        "label": "<b>Last Reading</b>",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "x": 890,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "9bae36f0.e18478",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "timestamp 4AA",
+        "func": "var msg1 = { payload: msg.payload[\"time\"] }\nvar uuid = { payload: msg.payload[\"uuid\"] }\nif (msg.payload[\"uuid\"] == \"0117c597916a\") {\n    return msg1;\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 330,
+        "y": 1127,
+        "wires": [
+            [
+                "15d5338.a3592cd"
+            ]
+        ]
+    },
+    {
+        "id": "5e02c499.a6158c",
+        "type": "ui_text",
+        "z": "c25178d3.bb572",
+        "group": "41987324.72b8fc",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "Last Reading",
+        "label": "<b>Last Reading</b>",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "x": 886,
+        "y": 1123,
+        "wires": []
+    },
+    {
+        "id": "696d9951.bd91c8",
+        "type": "moment",
+        "z": "c25178d3.bb572",
+        "name": "",
+        "topic": "",
+        "input": "payload.date",
+        "inputType": "msg",
+        "inTz": "ETC/GMT",
+        "adjAmount": "1",
+        "adjType": "hours",
+        "adjDir": "add",
+        "format": "ddd, MMM Do, HH:mm:ss",
+        "locale": "en_gb",
+        "output": "",
+        "outputType": "msg",
+        "outTz": "ETC/GMT",
+        "x": 686.5,
+        "y": 1029,
+        "wires": [
+            [
+                "1d2d19b7.3c5ee6"
+            ]
+        ]
+    },
+    {
+        "id": "d977edb6.959b58",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "Date.parse",
+        "func": "var msg1 = Date.parse(msg.payload)\nmsg.payload = {}\nmsg.payload.date = msg1\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 497.5,
+        "y": 1033,
+        "wires": [
+            [
+                "696d9951.bd91c8"
+            ]
+        ]
+    },
+    {
+        "id": "fb45197e.c40c78",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "Date.parse",
+        "func": "var msg1 = Date.parse(msg.payload)\nmsg.payload = {}\nmsg.payload.date = msg1\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 498,
+        "y": 993,
+        "wires": [
+            [
+                "8943896.7305a78"
+            ]
+        ]
+    },
+    {
+        "id": "8943896.7305a78",
+        "type": "moment",
+        "z": "c25178d3.bb572",
+        "name": "",
+        "topic": "",
+        "input": "payload.date",
+        "inputType": "msg",
+        "inTz": "ETC/GMT",
+        "adjAmount": "1",
+        "adjType": "hours",
+        "adjDir": "add",
+        "format": "ddd, MMM Do, HH:mm:ss",
+        "locale": "en_gb",
+        "output": "",
+        "outputType": "msg",
+        "outTz": "ETC/GMT",
+        "x": 683,
+        "y": 991,
+        "wires": [
+            [
+                "8de03dd2.fddcc"
+            ]
+        ]
+    },
+    {
+        "id": "e1440293.e6924",
+        "type": "moment",
+        "z": "c25178d3.bb572",
+        "name": "",
+        "topic": "",
+        "input": "payload.date",
+        "inputType": "msg",
+        "inTz": "ETC/GMT",
+        "adjAmount": "1",
+        "adjType": "hours",
+        "adjDir": "add",
+        "format": "ddd, MMM Do, HH:mm:ss",
+        "locale": "en_gb",
+        "output": "",
+        "outputType": "msg",
+        "outTz": "ETC/GMT",
+        "x": 697,
+        "y": 1078,
+        "wires": [
+            [
+                "e56d07da.e80308"
+            ]
+        ]
+    },
+    {
+        "id": "8a1880f7.08e67",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "Date.parse",
+        "func": "var msg1 = Date.parse(msg.payload)\nmsg.payload = {}\nmsg.payload.date = msg1\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 498,
+        "y": 1078,
+        "wires": [
+            [
+                "e1440293.e6924"
+            ]
+        ]
+    },
+    {
+        "id": "188009c6.400456",
+        "type": "moment",
+        "z": "c25178d3.bb572",
+        "name": "",
+        "topic": "",
+        "input": "payload.date",
+        "inputType": "msg",
+        "inTz": "ETC/GMT",
+        "adjAmount": "1",
+        "adjType": "hours",
+        "adjDir": "add",
+        "format": "ddd, MMM Do, HH:mm:ss",
+        "locale": "en_gb",
+        "output": "",
+        "outputType": "msg",
+        "outTz": "ETC/GMT",
+        "x": 688,
+        "y": 1121,
+        "wires": [
+            [
+                "5e02c499.a6158c"
+            ]
+        ]
+    },
+    {
+        "id": "15d5338.a3592cd",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "Date.parse",
+        "func": "var msg1 = Date.parse(msg.payload)\nmsg.payload = {}\nmsg.payload.date = msg1\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 499,
+        "y": 1125,
+        "wires": [
+            [
+                "188009c6.400456"
+            ]
+        ]
+    },
+    {
+        "id": "c468ce51.db5c2",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "Battery Level YUNZI",
+        "func": "var msg1 = { payload: msg.payload[\"batteryLevel\"] }\nvar uuid = { payload: msg.payload[\"uuid\"] }\nif (msg.payload[\"uuid\"] == \"0117c536b80f\") {\n    return msg1;\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1135,
+        "y": 987,
+        "wires": [
+            [
+                "e60da92e.877aa",
+                "59e974a3.888d74"
+            ]
+        ]
+    },
+    {
+        "id": "e60da92e.877aa",
+        "type": "ui_gauge",
+        "z": "c25178d3.bb572",
+        "name": "Battery Level",
+        "group": "bdba7049.4d8a38",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Battery Level 03",
+        "label": "",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "3500",
+        "colors": [
+            "#CA3838",
+            "#E6E600",
+            "#00B500"
+        ],
+        "seg1": "1500",
+        "seg2": "2500",
+        "x": 1569,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "59e974a3.888d74",
+        "type": "ui_chart",
+        "z": "c25178d3.bb572",
+        "name": "Battery Level 24 Hours",
+        "group": "bdba7049.4d8a38",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "label": "Battery Level 24 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1353,
+        "y": 984,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c098452b.232b98",
+        "type": "function",
+        "z": "c25178d3.bb572",
+        "name": "Battery Level 4AA",
+        "func": "var msg1 = { payload: msg.payload[\"batteryLevel\"] }\nvar uuid = { payload: msg.payload[\"uuid\"] }\nif (msg.payload[\"uuid\"] == \"0117c597916a\") {\n    return msg1;\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1136,
+        "y": 1033,
+        "wires": [
+            [
+                "9601b5db.606058",
+                "520785bf.1181b4"
+            ]
+        ]
+    },
+    {
+        "id": "9601b5db.606058",
+        "type": "ui_gauge",
+        "z": "c25178d3.bb572",
+        "name": "Battery Level",
+        "group": "41987324.72b8fc",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Battery Level",
+        "label": "",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "3500",
+        "colors": [
+            "#CA3838",
+            "#E6E600",
+            "#00B500"
+        ],
+        "seg1": "1500",
+        "seg2": "2500",
+        "x": 1549,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "520785bf.1181b4",
+        "type": "ui_chart",
+        "z": "c25178d3.bb572",
+        "name": "Battery Level 24 Hours",
+        "group": "41987324.72b8fc",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "label": "Battery Level 24 Hours",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data Yet",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "x": 1339,
+        "y": 1027,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "8c55aaba.2fe638",
+        "type": "e-mail",
+        "z": "ffc0f070.9208e",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "name": "jonepetersen@gmail.com",
+        "dname": "",
+        "x": 1492,
+        "y": 149,
+        "wires": []
+    },
+    {
+        "id": "ba636793.f73ee",
+        "type": "e-mail",
+        "z": "ffc0f070.9208e",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "name": "jonepetersen@gmail.com",
+        "dname": "",
+        "x": 1519,
+        "y": 303,
+        "wires": []
+    },
+    {
+        "id": "c5655435.f29208",
+        "type": "e-mail",
+        "z": "ffc0f070.9208e",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "name": "jonepetersen@gmail.com",
+        "dname": "",
+        "x": 1532,
+        "y": 448,
+        "wires": []
+    },
+    {
+        "id": "395f2b28.615f2c",
+        "type": "e-mail",
+        "z": "ffc0f070.9208e",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "name": "jonepetersen@gmail.com",
+        "dname": "",
+        "x": 1508,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "b06f8a65.aa86e8",
+        "type": "trigger",
+        "z": "ffc0f070.9208e",
+        "op1": "",
+        "op2": "No data for 20 minutes",
+        "op1type": "nul",
+        "op2type": "str",
+        "duration": "20",
+        "extend": true,
+        "units": "min",
+        "reset": "",
+        "name": "No data for 20 minutes",
+        "x": 320.5,
+        "y": 926,
+        "wires": [
+            [
+                "eace0ec9.872a4",
+                "2644557e.e031aa"
+            ]
+        ]
+    },
+    {
+        "id": "eace0ec9.872a4",
+        "type": "e-mail",
+        "z": "ffc0f070.9208e",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "name": "jonepetersen@gmail.com",
+        "dname": "",
+        "x": 618,
+        "y": 938,
+        "wires": []
+    },
+    {
+        "id": "2644557e.e031aa",
+        "type": "debug",
+        "z": "ffc0f070.9208e",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "false",
+        "x": 392.5,
+        "y": 1041,
+        "wires": []
+    }
+]
