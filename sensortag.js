@@ -16,9 +16,16 @@ var config = JSON.parse(
 
 var tagUUID = process.argv[2] //config.uuid;
 
-if (tagUUID == "b09122f67303") {var location = "fridge top"};
-if (tagUUID == "bc6a29ab3b07") {var location = "fridge bottom"};
-if (tagUUID == "bc6a29abebd3") {var location = "freezer"};
+var uuids = config.UUIDS;
+var locations = config.DEVICES;
+
+// match name of device to uuid
+var uuidindex = uuids.indexOf(tagUUID)
+var location = locations[uuidindex]
+
+//if (tagUUID == "b09122f67303") {var location = "fridge top"};
+//if (tagUUID == "bc6a29ab3b07") {var location = "fridge bottom"};
+//if (tagUUID == "bc6a29abebd3") {var location = "freezer"};
 
 var EnableTimeout = config.EnableTimeout
 var InitTagTimeout = config.InitTagTimeout

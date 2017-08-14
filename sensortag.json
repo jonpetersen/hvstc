@@ -5,5 +5,8 @@
   "MQTTPort" : 1883,
   "MQTTKeepAlive" : 10,
   "MQTTTopic" : "hvs/temps",
-  "MQTTQos" : 1
+  "MQTTQos" : 1,
+  "MQTTTopic" : "hvs/temps",
+  "UUIDS" : ["bc6a29ab3b07","bc6a29abebd3"],
+  "DEVICES" :["Deli Fridge - Under Counter","Deli Fridge - Main Display"]
 }

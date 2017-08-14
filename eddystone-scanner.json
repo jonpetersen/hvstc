@@ -7,6 +7,8 @@
   "MQTTTopic" : "hvs/temps",
   "MQTTQos" : 1,
   "MQTTTopic" : "hvs/temps",
-  "UUIDS" : ["0117c536b80f","0117c597916a","0117c58898b8"],
-  "DEVICES" :["YUNZI","4AA","USB"]
+  "UUIDS" : ["0117c536b80f","0117c597916a"],
+  "DEVICES" :["Ice Cream Freezer","Pasty Freezer"],
+  "allUUIDS" : ["0117c536b80f","0117c597916a","0117c58898b8"],
+  "NAMES" :["YUNZI","4AA","USB"]
 }
