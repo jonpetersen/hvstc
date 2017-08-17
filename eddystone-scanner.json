@@ -7,6 +7,8 @@
   "MQTTTopic" : "hvs/temps",
   "MQTTQos" : 1,
   "MQTTTopic" : "hvs/temps",
+  "MQTTUsername" : "hvstc16",
+  "MQTTPassword" : "hvstc16", 
   "UUIDS" : ["0117c536b80f","0117c597916a"],
   "DEVICES" :["Ice Cream Freezer","Pasty Freezer"],
   "allUUIDS" : ["0117c536b80f","0117c597916a","0117c58898b8"],

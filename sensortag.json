@@ -7,6 +7,8 @@
   "MQTTTopic" : "hvs/temps",
   "MQTTQos" : 1,
   "MQTTTopic" : "hvs/temps",
+  "MQTTUsername" : "hvstc16",
+  "MQTTPassword" : "hvstc16", 
   "UUIDS" : ["bc6a29ab3b07","bc6a29abebd3"],
   "DEVICES" :["Deli Fridge - Under Counter","Deli Fridge - Main Display"]
 }

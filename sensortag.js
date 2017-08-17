@@ -41,6 +41,8 @@ var mqttOptions = {
   host: mqttHost,
   port: mqttPort,
   keepalive: config.MQTTKeepAlive,
+  username: config.MQTTUsername,
+  password: config.MQTTPassword
 };
 var mqttQos = config.MQTTQos;
 
