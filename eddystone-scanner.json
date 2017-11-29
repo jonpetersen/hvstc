@@ -11,6 +11,5 @@
   "MQTTPassword" : "hvstc16", 
   "UUIDS" : ["0117c597f154","0117c597916a","0117c5972bf1","0117c5970ac0","0117c59793e5","0117c5975799","0117c5972425","0117c5971b9e","0117c5974d28","0117c597d773","0117c597e8b2","0117c597508f","0117c597f8e5"],
   "DEVICES" :["Ice Cream Freezer","Pasty Freezer","Deli Fridge Under Counter","Deli Counter Main Display","Janes Meals Freezer","Wine Fridge","Fish Freezer","Fridge Under Coffee Machine","Freezer Under Oven","Tartlets/Sausage  Freezer","Drinks Chiller","Milk/Deli Chiller","Outside"],
-  "allUUIDS" : ["0117c536b80f","0117c597916a","0117c58898b8"],
   "NAMES" :["4AA7","4AA1","4AA2","4AA3","4AA4","4AA5","4AA6"]
 }
